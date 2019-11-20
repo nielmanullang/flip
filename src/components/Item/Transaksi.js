@@ -70,7 +70,7 @@ class Transaksi extends React.Component {
                 marginTop: 5,
               }}>
               <Text style={{fontSize}}>
-                {convertNumber(this.props.item.account_number)}
+                {convertNumber(this.props.item.amount)}
               </Text>
               <Icon
                 type="FontAwesome"
