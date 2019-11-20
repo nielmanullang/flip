@@ -1,4 +1,5 @@
 {
   "name": "flip",
-  "displayName": "flip"
+  "displayName": "flip",
+  "apiUrl": "https://nextar.flip.id/"
 }

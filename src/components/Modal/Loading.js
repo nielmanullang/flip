@@ -1,42 +1,34 @@
-import { Text, View } from 'native-base';
+import {View} from 'native-base';
 import React from 'react';
-import { ActivityIndicator, StyleSheet } from 'react-native';
-
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'absolute',
-        height: '100%',
-        width: '100%',
-        backgroundColor: '#000',
-        opacity: 0.8
-    },
-    cover: {
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    loading: {
-        marginBottom: 10
-    },
-    text: {
-        color: '#fff',
-        fontSize: 13
-    }
-});
+import {ActivityIndicator} from 'react-native';
 
 class Loading extends React.Component {
-
-    render() {
-        return (
-            this.props.isVisible && <View style={styles.container}>
-                <View horizontalColumn style={styles.cover}>
-                    <ActivityIndicator size="large" color="#CE9D3C" style={styles.loading} />
-                    <Text style={styles.text}>{this.props.text != false ? 'Submitting Your Request' : null}</Text>
-                </View>
-            </View>
-        )
-    }
+  render() {
+    return (
+      this.props.isVisible && (
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'absolute',
+            height: '100%',
+            width: '100%',
+            backgroundColor: '#000',
+            opacity: 0.8,
+          }}>
+          <View
+            horizontalColumn
+            style={{alignItems: 'center', justifyContent: 'center'}}>
+            <ActivityIndicator
+              size="large"
+              color="#CE9D3C"
+              style={{marginBottom: 10}}
+            />
+          </View>
+        </View>
+      )
+    );
+  }
 }
 
 export default Loading;
